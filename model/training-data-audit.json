@@ -1,0 +1,62 @@
+{
+  "source": {
+    "damage_layer": "arcos_prod_damage_09_28_Clip",
+    "customer_layer": "Customer_Clip",
+    "region_values": [
+      "APCO"
+    ],
+    "customer_state_counts": {
+      "VA": 117619,
+      "??": 22,
+      "WV": 1
+    }
+  },
+  "row_counts": {
+    "damage_records": 1659,
+    "customer_records": 117642
+  },
+  "label_coverage": {
+    "repaired_yes": 1583,
+    "repaired_no": 76,
+    "report_time_present": 1659,
+    "repair_time_present": 1659,
+    "non_negative_repair_durations": 1659,
+    "repair_duration_hours_median": 24.0
+  },
+  "feature_coverage": {
+    "Asset_Type": 1658,
+    "Inform_Wor": 1659,
+    "Circuit": 1659,
+    "Substation": 1659,
+    "Access_Iss": 1658,
+    "Special_Eq": 286,
+    "Media": 1659,
+    "Longitude": 1659,
+    "Latitude": 1659
+  },
+  "damage_asset_types": {
+    "primary": 704,
+    "Pole": 355,
+    "Fuse Bank": 280,
+    "secondary": 156,
+    "Transformer": 74,
+    "Recloser Bank": 58,
+    "Switch": 19,
+    "Capacitor Bank": 6,
+    "Light": 5,
+    "": 1,
+    "Step Transformer": 1
+  },
+  "damage_descriptions": {
+    "Damaged Wire": 861,
+    "Damaged Switch": 357,
+    "Damaged Pole": 355,
+    "Damaged Equipment": 81,
+    "Damaged Light": 5
+  },
+  "assessment": {
+    "has_customer_outage_label": false,
+    "has_reliable_duration_label": true,
+    "recommendation": "Use repair duration as a cautious operational baseline; do not call it customer outage probability until outage/customer labels are established."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "target": "repair_duration_hours",
+  "rows": {
+    "source_valid": 1659,
+    "excluded_over_30_days": 143,
+    "total": 1516,
+    "train": 1212,
+    "test": 304
+  },
+  "metrics": {
+    "mae_hours": 26.74,
+    "rmse_hours": 61.38,
+    "test_median_hours": 0.0
+  },
+  "uncertainty": {
+    "method": "held-out residual quantiles",
+    "p10_residual_hours": -33.08,
+    "p90_residual_hours": 15.74,
+    "note": "Use as a baseline interval only; it is not calibrated for customer outage probability."
+  },
+  "features": {
+    "categorical": [
+      "Asset_Type",
+      "Inform_Wor",
+      "Circuit",
+      "Substation",
+      "Event",
+      "Incident_W"
+    ],
+    "numeric": [
+      "has_access_issue",
+      "has_special_equipment",
+      "media_count",
+      "latitude",
+      "longitude",
+      "report_month",
+      "report_hour",
+      "circuit_customer_count",
+      "circuit_critical_customer_count",
+      "circuit_fuse_count",
+      "circuit_recloser_count",
+      "circuit_switch_count",
+      "circuit_transformer_count",
+      "topology_depth",
+      "nearest_primary_miles",
+      "nearest_secondary_miles",
+      "nearest_transformer_miles",
+      "nearest_protective_miles",
+      "circuit_damage_history",
+      "asset_damage_history",
+      "event_damage_history",
+      "circuit_asset_damage_history",
+      "labor_reference_install_hours",
+      "labor_reference_removal_hours",
+      "indirect_labor_multiplier",
+      "access_labor_adder_hours",
+      "estimated_labor_hours"
+    ]
+  },
+  "limitations": [
+    "The target is asset repair duration, not customer outage duration.",
+    "The source territory is APCO, overwhelmingly Virginia.",
+    "No customer-level outage/no-outage label is available.",
+    "Durations over 30 days were excluded as likely placeholder or data-quality values."
+  ]
+}

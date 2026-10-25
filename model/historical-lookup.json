@@ -1,0 +1,1882 @@
+{
+  "generated_at": "2026-10-24T21:55:40.273257+00:00",
+  "source": "Aggregated APCO damage records; no premise or customer identifiers",
+  "circuits": {
+    "1": {
+      "damage_count": 2,
+      "median_duration_hours": 300.0,
+      "latitude": 37.172941,
+      "longitude": -80.140907,
+      "fuse_count": 67,
+      "recloser_count": 5,
+      "switch_count": 1,
+      "transformer_count": 183
+    },
+    "10": {
+      "damage_count": 183,
+      "median_duration_hours": 24.0,
+      "latitude": 37.171017,
+      "longitude": -79.948725,
+      "fuse_count": 219,
+      "recloser_count": 9,
+      "switch_count": 14,
+      "transformer_count": 608
+    },
+    "100": {
+      "damage_count": 5,
+      "median_duration_hours": 24.0,
+      "latitude": 37.243696,
+      "longitude": -79.981443,
+      "fuse_count": 28,
+      "recloser_count": 1,
+      "switch_count": 5,
+      "transformer_count": 129
+    },
+    "102": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0,
+      "latitude": 37.299615,
+      "longitude": -79.978386,
+      "fuse_count": 22,
+      "switch_count": 4,
+      "transformer_count": 113
+    },
+    "104": {
+      "damage_count": 5,
+      "median_duration_hours": 72.0,
+      "latitude": 37.273741,
+      "longitude": -79.918893,
+      "fuse_count": 53,
+      "switch_count": 12,
+      "transformer_count": 214
+    },
+    "105": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0,
+      "latitude": 37.270981,
+      "longitude": -79.981982,
+      "fuse_count": 39,
+      "recloser_count": 1,
+      "switch_count": 3,
+      "transformer_count": 116
+    },
+    "107": {
+      "damage_count": 8,
+      "median_duration_hours": 0.0,
+      "latitude": 37.267728,
+      "longitude": -79.87108,
+      "fuse_count": 78,
+      "recloser_count": 4,
+      "switch_count": 8,
+      "transformer_count": 321
+    },
+    "108": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0,
+      "latitude": 37.271955,
+      "longitude": -79.965181,
+      "fuse_count": 59,
+      "recloser_count": 1,
+      "switch_count": 11,
+      "transformer_count": 222
+    },
+    "109": {
+      "damage_count": 12,
+      "median_duration_hours": 0.0,
+      "latitude": 37.279403,
+      "longitude": -79.896454,
+      "fuse_count": 68,
+      "recloser_count": 2,
+      "switch_count": 16,
+      "transformer_count": 268
+    },
+    "11": {
+      "damage_count": 2,
+      "median_duration_hours": 300.0,
+      "latitude": 37.236431,
+      "longitude": -79.999315,
+      "fuse_count": 36,
+      "switch_count": 4,
+      "transformer_count": 87
+    },
+    "110": {
+      "damage_count": 8,
+      "median_duration_hours": 576.0,
+      "latitude": 37.253154,
+      "longitude": -80.016624,
+      "fuse_count": 68,
+      "recloser_count": 2,
+      "switch_count": 9,
+      "transformer_count": 219
+    },
+    "111": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0,
+      "latitude": 37.301991,
+      "longitude": -79.998656,
+      "fuse_count": 36,
+      "recloser_count": 1,
+      "switch_count": 4,
+      "transformer_count": 132
+    },
+    "112": {
+      "damage_count": 1,
+      "median_duration_hours": 288.0,
+      "latitude": 37.308371,
+      "longitude": -79.930377,
+      "fuse_count": 31,
+      "switch_count": 3,
+      "transformer_count": 99
+    },
+    "114": {
+      "damage_count": 102,
+      "median_duration_hours": 48.0,
+      "latitude": 37.200101,
+      "longitude": -79.882118,
+      "fuse_count": 245,
+      "recloser_count": 13,
+      "switch_count": 24,
+      "transformer_count": 848
+    },
+    "115": {
+      "damage_count": 17,
+      "median_duration_hours": 24.0,
+      "latitude": 37.220885,
+      "longitude": -79.928708,
+      "fuse_count": 50,
+      "recloser_count": 1,
+      "switch_count": 5,
+      "transformer_count": 217
+    },
+    "12": {
+      "damage_count": 7,
+      "median_duration_hours": 0.0,
+      "latitude": 37.208151,
+      "longitude": -80.024014,
+      "fuse_count": 31,
+      "recloser_count": 2,
+      "switch_count": 6,
+      "transformer_count": 100
+    },
+    "15": {
+      "damage_count": 21,
+      "median_duration_hours": 24.0,
+      "latitude": 37.364094,
+      "longitude": -79.938093,
+      "fuse_count": 96,
+      "recloser_count": 5,
+      "switch_count": 17,
+      "transformer_count": 341
+    },
+    "16": {
+      "damage_count": 2,
+      "median_duration_hours": 444.0,
+      "latitude": 37.227301,
+      "longitude": -80.000406,
+      "fuse_count": 35,
+      "switch_count": 5,
+      "transformer_count": 83
+    },
+    "18": {
+      "damage_count": 113,
+      "median_duration_hours": 48.0,
+      "latitude": 37.182792,
+      "longitude": -80.019305,
+      "fuse_count": 62,
+      "recloser_count": 4,
+      "switch_count": 7,
+      "transformer_count": 310
+    },
+    "2": {
+      "damage_count": 235,
+      "median_duration_hours": 24.0,
+      "latitude": 37.084619,
+      "longitude": -80.14035,
+      "fuse_count": 376,
+      "recloser_count": 27,
+      "switch_count": 27,
+      "transformer_count": 1237
+    },
+    "20": {
+      "damage_count": 2,
+      "median_duration_hours": 552.0,
+      "latitude": 37.406934,
+      "longitude": -79.904189,
+      "fuse_count": 52,
+      "recloser_count": 1,
+      "switch_count": 6,
+      "transformer_count": 176
+    },
+    "21": {
+      "damage_count": 9,
+      "median_duration_hours": 24.0,
+      "latitude": 37.243469,
+      "longitude": -80.0299,
+      "fuse_count": 139,
+      "recloser_count": 4,
+      "switch_count": 11,
+      "transformer_count": 398
+    },
+    "22": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0,
+      "latitude": 37.331026,
+      "longitude": -79.871984,
+      "fuse_count": 45,
+      "recloser_count": 2,
+      "switch_count": 6,
+      "transformer_count": 233
+    },
+    "24": {
+      "damage_count": 17,
+      "median_duration_hours": 48.0,
+      "latitude": 37.231902,
+      "longitude": -79.969738,
+      "fuse_count": 45,
+      "recloser_count": 1,
+      "switch_count": 6,
+      "transformer_count": 181
+    },
+    "25": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0,
+      "latitude": 37.303429,
+      "longitude": -80.008958,
+      "fuse_count": 51,
+      "recloser_count": 1,
+      "switch_count": 7,
+      "transformer_count": 230
+    },
+    "26": {
+      "damage_count": 30,
+      "median_duration_hours": 0.0,
+      "latitude": 37.24271,
+      "longitude": -80.047527,
+      "fuse_count": 141,
+      "recloser_count": 5,
+      "switch_count": 13,
+      "transformer_count": 461
+    },
+    "27": {
+      "damage_count": 36,
+      "median_duration_hours": 120.0,
+      "latitude": 37.199797,
+      "longitude": -80.212042,
+      "fuse_count": 122,
+      "recloser_count": 8,
+      "switch_count": 9,
+      "transformer_count": 525
+    },
+    "28": {
+      "damage_count": 2,
+      "median_duration_hours": 276.0,
+      "latitude": 37.290075,
+      "longitude": -79.984247,
+      "fuse_count": 50,
+      "switch_count": 8,
+      "transformer_count": 141
+    },
+    "29": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0,
+      "latitude": 37.303277,
+      "longitude": -79.980159,
+      "fuse_count": 35,
+      "switch_count": 5,
+      "transformer_count": 109
+    },
+    "3": {
+      "damage_count": 3,
+      "median_duration_hours": 504.0,
+      "latitude": 37.293389,
+      "longitude": -80.130558,
+      "fuse_count": 81,
+      "recloser_count": 4,
+      "switch_count": 7,
+      "transformer_count": 205
+    },
+    "30": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0,
+      "latitude": 37.318266,
+      "longitude": -79.945562,
+      "fuse_count": 30,
+      "switch_count": 5,
+      "transformer_count": 111
+    },
+    "31": {
+      "damage_count": 26,
+      "median_duration_hours": 0.0,
+      "latitude": 37.261053,
+      "longitude": -80.087,
+      "fuse_count": 99,
+      "recloser_count": 8,
+      "switch_count": 4,
+      "transformer_count": 439
+    },
+    "32": {
+      "damage_count": 2,
+      "median_duration_hours": 312.0,
+      "latitude": 37.318426,
+      "longitude": -79.950154,
+      "fuse_count": 27,
+      "switch_count": 4,
+      "transformer_count": 80
+    },
+    "33": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0,
+      "latitude": 37.306612,
+      "longitude": -79.929866,
+      "fuse_count": 15,
+      "switch_count": 5,
+      "transformer_count": 49
+    },
+    "35": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0,
+      "latitude": 37.231547,
+      "longitude": -80.011976,
+      "fuse_count": 40,
+      "recloser_count": 1,
+      "switch_count": 6,
+      "transformer_count": 148
+    },
+    "36": {
+      "damage_count": 88,
+      "median_duration_hours": 24.0,
+      "latitude": 37.241399,
+      "longitude": -80.149842,
+      "fuse_count": 39,
+      "recloser_count": 4,
+      "switch_count": 7,
+      "transformer_count": 168
+    },
+    "38": {
+      "damage_count": 6,
+      "median_duration_hours": 0.0,
+      "latitude": 37.257312,
+      "longitude": -79.993805,
+      "fuse_count": 58,
+      "recloser_count": 3,
+      "switch_count": 12,
+      "transformer_count": 190
+    },
+    "39": {
+      "damage_count": 9,
+      "median_duration_hours": 0.0,
+      "latitude": 37.360879,
+      "longitude": -80.059888,
+      "fuse_count": 218,
+      "recloser_count": 13,
+      "switch_count": 17,
+      "transformer_count": 700
+    },
+    "4": {
+      "damage_count": 33,
+      "median_duration_hours": 24.0,
+      "latitude": 37.226448,
+      "longitude": -79.916202,
+      "fuse_count": 65,
+      "recloser_count": 6,
+      "switch_count": 7,
+      "transformer_count": 237
+    },
+    "40": {
+      "damage_count": 6,
+      "median_duration_hours": 300.0,
+      "latitude": 37.248725,
+      "longitude": -79.838433,
+      "fuse_count": 150,
+      "recloser_count": 10,
+      "switch_count": 11,
+      "transformer_count": 694
+    },
+    "41": {
+      "damage_count": 10,
+      "median_duration_hours": 0.0,
+      "latitude": 37.289301,
+      "longitude": -80.017337,
+      "fuse_count": 55,
+      "recloser_count": 3,
+      "switch_count": 8,
+      "transformer_count": 234
+    },
+    "42": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0,
+      "latitude": 37.313209,
+      "longitude": -79.92375,
+      "fuse_count": 55,
+      "recloser_count": 1,
+      "switch_count": 4,
+      "transformer_count": 230
+    },
+    "43": {
+      "damage_count": 20,
+      "median_duration_hours": 24.0,
+      "latitude": 37.286685,
+      "longitude": -79.852534,
+      "fuse_count": 98,
+      "recloser_count": 3,
+      "switch_count": 10,
+      "transformer_count": 403
+    },
+    "45": {
+      "damage_count": 2,
+      "median_duration_hours": 276.0,
+      "latitude": 37.306273,
+      "longitude": -79.954541,
+      "fuse_count": 54,
+      "switch_count": 11,
+      "transformer_count": 179
+    },
+    "46": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0,
+      "latitude": 37.27409,
+      "longitude": -79.958632,
+      "fuse_count": 10,
+      "switch_count": 1,
+      "transformer_count": 38
+    },
+    "47": {
+      "damage_count": 2,
+      "median_duration_hours": 264.0,
+      "latitude": 37.317148,
+      "longitude": -80.007823,
+      "fuse_count": 154,
+      "recloser_count": 1,
+      "switch_count": 6,
+      "transformer_count": 549
+    },
+    "49": {
+      "damage_count": 4,
+      "median_duration_hours": 300.0,
+      "latitude": 37.26752,
+      "longitude": -79.951521,
+      "fuse_count": 31,
+      "recloser_count": 1,
+      "switch_count": 5,
+      "transformer_count": 118
+    },
+    "5": {
+      "damage_count": 7,
+      "median_duration_hours": 0.0,
+      "latitude": 37.350495,
+      "longitude": -79.983505,
+      "fuse_count": 144,
+      "recloser_count": 5,
+      "switch_count": 8,
+      "transformer_count": 449
+    },
+    "51": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0,
+      "latitude": 37.268541,
+      "longitude": -79.879266,
+      "fuse_count": 66,
+      "recloser_count": 1,
+      "switch_count": 7,
+      "transformer_count": 219
+    },
+    "52": {
+      "damage_count": 18,
+      "median_duration_hours": 24.0,
+      "latitude": 37.374471,
+      "longitude": -79.859357,
+      "fuse_count": 75,
+      "recloser_count": 2,
+      "switch_count": 8,
+      "transformer_count": 332
+    },
+    "53": {
+      "damage_count": 6,
+      "median_duration_hours": 120.0,
+      "latitude": 37.341835,
+      "longitude": -80.005341,
+      "fuse_count": 110,
+      "recloser_count": 5,
+      "switch_count": 13,
+      "transformer_count": 308
+    },
+    "57": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0,
+      "latitude": 37.232215,
+      "longitude": -80.013973,
+      "fuse_count": 46,
+      "recloser_count": 1,
+      "switch_count": 4,
+      "transformer_count": 153
+    },
+    "58": {
+      "damage_count": 6,
+      "median_duration_hours": 528.0,
+      "latitude": 37.219784,
+      "longitude": -80.012387,
+      "fuse_count": 59,
+      "recloser_count": 4,
+      "switch_count": 3,
+      "transformer_count": 186
+    },
+    "6": {
+      "damage_count": 18,
+      "median_duration_hours": 468.0,
+      "latitude": 37.283143,
+      "longitude": -79.816037,
+      "fuse_count": 481,
+      "recloser_count": 30,
+      "switch_count": 23,
+      "transformer_count": 1851
+    },
+    "60": {
+      "damage_count": 20,
+      "median_duration_hours": 0.0,
+      "latitude": 37.402892,
+      "longitude": -79.70528,
+      "fuse_count": 220,
+      "recloser_count": 15,
+      "switch_count": 13,
+      "transformer_count": 789
+    },
+    "61": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0,
+      "latitude": 37.360582,
+      "longitude": -79.822609,
+      "fuse_count": 116,
+      "recloser_count": 4,
+      "switch_count": 15,
+      "transformer_count": 548
+    },
+    "62": {
+      "damage_count": 42,
+      "median_duration_hours": 24.0,
+      "latitude": 37.245655,
+      "longitude": -79.878956,
+      "fuse_count": 67,
+      "recloser_count": 6,
+      "switch_count": 8,
+      "transformer_count": 283
+    },
+    "63": {
+      "damage_count": 3,
+      "median_duration_hours": 312.0,
+      "latitude": 37.291357,
+      "longitude": -79.951343,
+      "fuse_count": 44,
+      "recloser_count": 2,
+      "switch_count": 5,
+      "transformer_count": 152
+    },
+    "64": {
+      "damage_count": 11,
+      "median_duration_hours": 0.0,
+      "latitude": 37.290078,
+      "longitude": -79.911978,
+      "fuse_count": 64,
+      "recloser_count": 2,
+      "switch_count": 15,
+      "transformer_count": 272
+    },
+    "65": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0,
+      "latitude": 37.241979,
+      "longitude": -79.995765,
+      "fuse_count": 70,
+      "recloser_count": 2,
+      "switch_count": 9,
+      "transformer_count": 237
+    },
+    "66": {
+      "damage_count": 21,
+      "median_duration_hours": 0.0,
+      "latitude": 37.301992,
+      "longitude": -80.091308,
+      "fuse_count": 79,
+      "recloser_count": 3,
+      "switch_count": 3,
+      "transformer_count": 258
+    },
+    "68": {
+      "damage_count": 2,
+      "median_duration_hours": 216.0,
+      "latitude": 37.354884,
+      "longitude": -79.799588,
+      "fuse_count": 108,
+      "recloser_count": 6,
+      "switch_count": 10,
+      "transformer_count": 361
+    },
+    "69": {
+      "damage_count": 18,
+      "median_duration_hours": 0.0,
+      "latitude": 37.238199,
+      "longitude": -79.953737,
+      "fuse_count": 84,
+      "recloser_count": 2,
+      "switch_count": 12,
+      "transformer_count": 290
+    },
+    "7": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0,
+      "latitude": 37.268984,
+      "longitude": -79.930018,
+      "fuse_count": 29,
+      "switch_count": 6,
+      "transformer_count": 170
+    },
+    "71": {
+      "damage_count": 11,
+      "median_duration_hours": 528.0,
+      "latitude": 37.32646,
+      "longitude": -79.946641,
+      "fuse_count": 167,
+      "recloser_count": 7,
+      "switch_count": 16,
+      "transformer_count": 487
+    },
+    "72": {
+      "damage_count": 131,
+      "median_duration_hours": 24.0,
+      "latitude": 37.209192,
+      "longitude": -80.066793,
+      "fuse_count": 238,
+      "recloser_count": 13,
+      "switch_count": 22,
+      "transformer_count": 796
+    },
+    "78": {
+      "damage_count": 32,
+      "median_duration_hours": 24.0,
+      "latitude": 37.221127,
+      "longitude": -80.046118,
+      "fuse_count": 99,
+      "recloser_count": 7,
+      "switch_count": 12,
+      "transformer_count": 298
+    },
+    "8": {
+      "damage_count": 6,
+      "median_duration_hours": 24.0,
+      "latitude": 37.301513,
+      "longitude": -79.887317,
+      "fuse_count": 100,
+      "recloser_count": 6,
+      "switch_count": 7,
+      "transformer_count": 305
+    },
+    "80": {
+      "damage_count": 6,
+      "median_duration_hours": 192.0,
+      "latitude": 37.258138,
+      "longitude": -79.969383,
+      "fuse_count": 54,
+      "recloser_count": 1,
+      "switch_count": 5,
+      "transformer_count": 172
+    },
+    "81": {
+      "damage_count": 11,
+      "median_duration_hours": 48.0,
+      "latitude": 37.236387,
+      "longitude": -79.94339,
+      "fuse_count": 70,
+      "recloser_count": 3,
+      "switch_count": 14,
+      "transformer_count": 206
+    },
+    "86": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0,
+      "latitude": 37.22652,
+      "longitude": -79.977435,
+      "fuse_count": 37,
+      "switch_count": 11,
+      "transformer_count": 76
+    },
+    "88": {
+      "damage_count": 11,
+      "median_duration_hours": 552.0,
+      "latitude": 37.234477,
+      "longitude": -79.991392,
+      "fuse_count": 35,
+      "switch_count": 1,
+      "transformer_count": 133
+    },
+    "90": {
+      "damage_count": 15,
+      "median_duration_hours": 96.0,
+      "latitude": 37.203611,
+      "longitude": -79.993404,
+      "fuse_count": 92,
+      "recloser_count": 3,
+      "switch_count": 4,
+      "transformer_count": 306
+    },
+    "91": {
+      "damage_count": 5,
+      "median_duration_hours": 24.0,
+      "latitude": 37.238234,
+      "longitude": -80.166863,
+      "fuse_count": 5,
+      "switch_count": 5,
+      "transformer_count": 10
+    },
+    "92": {
+      "damage_count": 13,
+      "median_duration_hours": 0.0,
+      "latitude": 37.288938,
+      "longitude": -79.963405,
+      "fuse_count": 36,
+      "recloser_count": 1,
+      "switch_count": 5,
+      "transformer_count": 149
+    },
+    "93": {
+      "damage_count": 4,
+      "median_duration_hours": 36.0,
+      "latitude": 37.218153,
+      "longitude": -80.000877,
+      "fuse_count": 20,
+      "recloser_count": 1,
+      "switch_count": 4,
+      "transformer_count": 90
+    },
+    "97": {
+      "damage_count": 5,
+      "median_duration_hours": 552.0,
+      "latitude": 37.252306,
+      "longitude": -79.966388,
+      "fuse_count": 48,
+      "recloser_count": 2,
+      "switch_count": 10,
+      "transformer_count": 148
+    },
+    "99": {
+      "damage_count": 6,
+      "median_duration_hours": 600.0,
+      "latitude": 37.404341,
+      "longitude": -79.878684,
+      "fuse_count": 97,
+      "recloser_count": 6,
+      "switch_count": 10,
+      "transformer_count": 329
+    },
+    "unknown": {
+      "damage_count": 13,
+      "median_duration_hours": 96.0,
+      "latitude": 37.22251,
+      "longitude": -80.00498
+    }
+  },
+  "circuit_assets": {
+    "1:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "1:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 576.0
+    },
+    "10:Fuse Bank": {
+      "damage_count": 46,
+      "median_duration_hours": 24.0
+    },
+    "10:Pole": {
+      "damage_count": 33,
+      "median_duration_hours": 24.0
+    },
+    "10:Recloser Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "10:Switch": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "10:Transformer": {
+      "damage_count": 12,
+      "median_duration_hours": 24.0
+    },
+    "10:primary": {
+      "damage_count": 71,
+      "median_duration_hours": 24.0
+    },
+    "10:secondary": {
+      "damage_count": 13,
+      "median_duration_hours": 24.0
+    },
+    "100:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "100:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "100:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "102:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "104:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 72.0
+    },
+    "104:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0
+    },
+    "104:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 624.0
+    },
+    "105:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "107:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "107:Pole": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0
+    },
+    "107:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0
+    },
+    "107:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "108:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "108:secondary": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "109:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "109:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "109:Switch": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0
+    },
+    "109:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "109:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 528.0
+    },
+    "109:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 12.0
+    },
+    "11:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 300.0
+    },
+    "110:Fuse Bank": {
+      "damage_count": 4,
+      "median_duration_hours": 576.0
+    },
+    "110:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "110:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "110:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 576.0
+    },
+    "110:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 600.0
+    },
+    "111:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "111:secondary": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0
+    },
+    "112:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 288.0
+    },
+    "114:Fuse Bank": {
+      "damage_count": 11,
+      "median_duration_hours": 0.0
+    },
+    "114:Pole": {
+      "damage_count": 24,
+      "median_duration_hours": 48.0
+    },
+    "114:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "114:Switch": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "114:Transformer": {
+      "damage_count": 4,
+      "median_duration_hours": 48.0
+    },
+    "114:primary": {
+      "damage_count": 55,
+      "median_duration_hours": 48.0
+    },
+    "114:secondary": {
+      "damage_count": 6,
+      "median_duration_hours": 276.0
+    },
+    "115:Fuse Bank": {
+      "damage_count": 4,
+      "median_duration_hours": 24.0
+    },
+    "115:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "115:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "115:primary": {
+      "damage_count": 7,
+      "median_duration_hours": 24.0
+    },
+    "115:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 48.0
+    },
+    "12:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "12:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "12:Switch": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "12:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "12:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "15:Fuse Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "15:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 504.0
+    },
+    "15:Transformer": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "15:primary": {
+      "damage_count": 8,
+      "median_duration_hours": 0.0
+    },
+    "15:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 576.0
+    },
+    "16:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 384.0
+    },
+    "16:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 504.0
+    },
+    "18:Fuse Bank": {
+      "damage_count": 13,
+      "median_duration_hours": 24.0
+    },
+    "18:Pole": {
+      "damage_count": 38,
+      "median_duration_hours": 48.0
+    },
+    "18:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 48.0
+    },
+    "18:Transformer": {
+      "damage_count": 4,
+      "median_duration_hours": 60.0
+    },
+    "18:primary": {
+      "damage_count": 52,
+      "median_duration_hours": 72.0
+    },
+    "18:secondary": {
+      "damage_count": 5,
+      "median_duration_hours": 48.0
+    },
+    "2:Fuse Bank": {
+      "damage_count": 33,
+      "median_duration_hours": 0.0
+    },
+    "2:Pole": {
+      "damage_count": 52,
+      "median_duration_hours": 36.0
+    },
+    "2:Recloser Bank": {
+      "damage_count": 12,
+      "median_duration_hours": 0.0
+    },
+    "2:Switch": {
+      "damage_count": 4,
+      "median_duration_hours": 12.0
+    },
+    "2:Transformer": {
+      "damage_count": 5,
+      "median_duration_hours": 48.0
+    },
+    "2:primary": {
+      "damage_count": 117,
+      "median_duration_hours": 24.0
+    },
+    "2:secondary": {
+      "damage_count": 12,
+      "median_duration_hours": 48.0
+    },
+    "20:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "20:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "21:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "21:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "21:primary": {
+      "damage_count": 4,
+      "median_duration_hours": 24.0
+    },
+    "22:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "22:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 36.0
+    },
+    "22:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "24:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "24:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 300.0
+    },
+    "24:primary": {
+      "damage_count": 9,
+      "median_duration_hours": 552.0
+    },
+    "24:secondary": {
+      "damage_count": 4,
+      "median_duration_hours": 48.0
+    },
+    "25:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "25:Transformer": {
+      "damage_count": 2,
+      "median_duration_hours": 264.0
+    },
+    "25:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "25:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "26:Fuse Bank": {
+      "damage_count": 8,
+      "median_duration_hours": 0.0
+    },
+    "26:Pole": {
+      "damage_count": 8,
+      "median_duration_hours": 0.0
+    },
+    "26:Switch": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "26:primary": {
+      "damage_count": 12,
+      "median_duration_hours": 0.0
+    },
+    "27:Fuse Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 120.0
+    },
+    "27:Pole": {
+      "damage_count": 4,
+      "median_duration_hours": 132.0
+    },
+    "27:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 120.0
+    },
+    "27:primary": {
+      "damage_count": 25,
+      "median_duration_hours": 120.0
+    },
+    "27:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 120.0
+    },
+    "28:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "28:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "29:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "29:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "29:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "3:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 564.0
+    },
+    "3:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 384.0
+    },
+    "30:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "31:Fuse Bank": {
+      "damage_count": 6,
+      "median_duration_hours": 0.0
+    },
+    "31:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "31:Recloser Bank": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "31:primary": {
+      "damage_count": 14,
+      "median_duration_hours": 0.0
+    },
+    "31:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "32:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 312.0
+    },
+    "32:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 312.0
+    },
+    "33:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "35:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0
+    },
+    "36:": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "36:Fuse Bank": {
+      "damage_count": 13,
+      "median_duration_hours": 0.0
+    },
+    "36:Pole": {
+      "damage_count": 12,
+      "median_duration_hours": 24.0
+    },
+    "36:Recloser Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 24.0
+    },
+    "36:Switch": {
+      "damage_count": 2,
+      "median_duration_hours": 12.0
+    },
+    "36:Transformer": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "36:primary": {
+      "damage_count": 50,
+      "median_duration_hours": 24.0
+    },
+    "36:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 120.0
+    },
+    "38:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "38:Transformer": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "38:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "39:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "39:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "39:Recloser Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "39:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "39:secondary": {
+      "damage_count": 3,
+      "median_duration_hours": 528.0
+    },
+    "4:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 12.0
+    },
+    "4:Pole": {
+      "damage_count": 11,
+      "median_duration_hours": 24.0
+    },
+    "4:Recloser Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 12.0
+    },
+    "4:Transformer": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "4:primary": {
+      "damage_count": 9,
+      "median_duration_hours": 24.0
+    },
+    "4:secondary": {
+      "damage_count": 6,
+      "median_duration_hours": 276.0
+    },
+    "40:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 600.0
+    },
+    "40:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "40:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 348.0
+    },
+    "40:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "41:Pole": {
+      "damage_count": 6,
+      "median_duration_hours": 0.0
+    },
+    "41:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "41:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 600.0
+    },
+    "41:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 504.0
+    },
+    "42:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "43:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "43:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 276.0
+    },
+    "43:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "43:primary": {
+      "damage_count": 11,
+      "median_duration_hours": 24.0
+    },
+    "43:secondary": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "45:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "45:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "46:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "47:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "47:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "49:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 36.0
+    },
+    "49:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 528.0
+    },
+    "5:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "5:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "5:Transformer": {
+      "damage_count": 2,
+      "median_duration_hours": 12.0
+    },
+    "5:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "51:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "51:Light": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "51:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "51:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "52:Fuse Bank": {
+      "damage_count": 9,
+      "median_duration_hours": 24.0
+    },
+    "52:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "52:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 600.0
+    },
+    "52:primary": {
+      "damage_count": 5,
+      "median_duration_hours": 600.0
+    },
+    "53:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "53:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 120.0
+    },
+    "53:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "53:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "57:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "58:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "58:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 552.0
+    },
+    "58:primary": {
+      "damage_count": 3,
+      "median_duration_hours": 528.0
+    },
+    "6:Fuse Bank": {
+      "damage_count": 3,
+      "median_duration_hours": 24.0
+    },
+    "6:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 600.0
+    },
+    "6:primary": {
+      "damage_count": 12,
+      "median_duration_hours": 252.0
+    },
+    "6:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 528.0
+    },
+    "60:Fuse Bank": {
+      "damage_count": 7,
+      "median_duration_hours": 0.0
+    },
+    "60:Pole": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "60:primary": {
+      "damage_count": 10,
+      "median_duration_hours": 120.0
+    },
+    "61:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "62:Fuse Bank": {
+      "damage_count": 7,
+      "median_duration_hours": 0.0
+    },
+    "62:Pole": {
+      "damage_count": 11,
+      "median_duration_hours": 24.0
+    },
+    "62:Recloser Bank": {
+      "damage_count": 4,
+      "median_duration_hours": 0.0
+    },
+    "62:Switch": {
+      "damage_count": 1,
+      "median_duration_hours": 48.0
+    },
+    "62:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "62:primary": {
+      "damage_count": 16,
+      "median_duration_hours": 24.0
+    },
+    "62:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 72.0
+    },
+    "63:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 312.0
+    },
+    "63:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "63:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0
+    },
+    "64:Fuse Bank": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "64:Transformer": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "64:primary": {
+      "damage_count": 6,
+      "median_duration_hours": 0.0
+    },
+    "65:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "65:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "65:primary": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "66:Fuse Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "66:Pole": {
+      "damage_count": 5,
+      "median_duration_hours": 120.0
+    },
+    "66:primary": {
+      "damage_count": 10,
+      "median_duration_hours": 0.0
+    },
+    "66:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 120.0
+    },
+    "68:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 432.0
+    },
+    "68:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "69:Fuse Bank": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "69:Pole": {
+      "damage_count": 5,
+      "median_duration_hours": 24.0
+    },
+    "69:primary": {
+      "damage_count": 10,
+      "median_duration_hours": 12.0
+    },
+    "7:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "7:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "71:Fuse Bank": {
+      "damage_count": 4,
+      "median_duration_hours": 576.0
+    },
+    "71:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 528.0
+    },
+    "71:Recloser Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 312.0
+    },
+    "71:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "71:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 312.0
+    },
+    "71:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 264.0
+    },
+    "72:Capacitor Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 48.0
+    },
+    "72:Fuse Bank": {
+      "damage_count": 19,
+      "median_duration_hours": 24.0
+    },
+    "72:Pole": {
+      "damage_count": 25,
+      "median_duration_hours": 24.0
+    },
+    "72:Recloser Bank": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "72:Transformer": {
+      "damage_count": 4,
+      "median_duration_hours": 24.0
+    },
+    "72:primary": {
+      "damage_count": 73,
+      "median_duration_hours": 24.0
+    },
+    "72:secondary": {
+      "damage_count": 4,
+      "median_duration_hours": 12.0
+    },
+    "78:Fuse Bank": {
+      "damage_count": 8,
+      "median_duration_hours": 24.0
+    },
+    "78:Pole": {
+      "damage_count": 4,
+      "median_duration_hours": 72.0
+    },
+    "78:Recloser Bank": {
+      "damage_count": 6,
+      "median_duration_hours": 12.0
+    },
+    "78:Switch": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "78:Transformer": {
+      "damage_count": 2,
+      "median_duration_hours": 48.0
+    },
+    "78:primary": {
+      "damage_count": 11,
+      "median_duration_hours": 24.0
+    },
+    "8:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 24.0
+    },
+    "8:Pole": {
+      "damage_count": 1,
+      "median_duration_hours": 48.0
+    },
+    "8:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "8:primary": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "8:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 648.0
+    },
+    "80:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 252.0
+    },
+    "80:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "80:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 288.0
+    },
+    "80:secondary": {
+      "damage_count": 1,
+      "median_duration_hours": 72.0
+    },
+    "81:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 48.0
+    },
+    "81:Pole": {
+      "damage_count": 4,
+      "median_duration_hours": 24.0
+    },
+    "81:primary": {
+      "damage_count": 3,
+      "median_duration_hours": 48.0
+    },
+    "81:secondary": {
+      "damage_count": 3,
+      "median_duration_hours": 48.0
+    },
+    "86:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "88:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "88:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 276.0
+    },
+    "88:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 552.0
+    },
+    "88:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 276.0
+    },
+    "88:secondary": {
+      "damage_count": 4,
+      "median_duration_hours": 552.0
+    },
+    "90:Fuse Bank": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "90:Pole": {
+      "damage_count": 5,
+      "median_duration_hours": 96.0
+    },
+    "90:primary": {
+      "damage_count": 4,
+      "median_duration_hours": 48.0
+    },
+    "90:secondary": {
+      "damage_count": 3,
+      "median_duration_hours": 96.0
+    },
+    "91:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 24.0
+    },
+    "91:Pole": {
+      "damage_count": 4,
+      "median_duration_hours": 36.0
+    },
+    "92:Fuse Bank": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "92:Light": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "92:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "92:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 0.0
+    },
+    "92:primary": {
+      "damage_count": 3,
+      "median_duration_hours": 0.0
+    },
+    "92:secondary": {
+      "damage_count": 5,
+      "median_duration_hours": 0.0
+    },
+    "93:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "93:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 84.0
+    },
+    "97:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    },
+    "97:primary": {
+      "damage_count": 3,
+      "median_duration_hours": 552.0
+    },
+    "99:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 600.0
+    },
+    "99:Pole": {
+      "damage_count": 2,
+      "median_duration_hours": 600.0
+    },
+    "99:primary": {
+      "damage_count": 2,
+      "median_duration_hours": 360.0
+    },
+    "unknown:Fuse Bank": {
+      "damage_count": 2,
+      "median_duration_hours": 288.0
+    },
+    "unknown:Transformer": {
+      "damage_count": 1,
+      "median_duration_hours": 600.0
+    },
+    "unknown:primary": {
+      "damage_count": 8,
+      "median_duration_hours": 300.0
+    },
+    "unknown:secondary": {
+      "damage_count": 2,
+      "median_duration_hours": 0.0
+    }
+  }
+}

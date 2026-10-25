@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+aep_challenge_hack26-main
+*.zip
+*.xlsx
+__pycache__

@@ -1,0 +1,69 @@
+{
+  "target": "repair_duration_hours",
+  "definition": "two-stage same-day versus extended repair, then positive duration",
+  "rows": {
+    "total": 1516,
+    "train": 1212,
+    "test": 304,
+    "positive_train": 923,
+    "positive_test": 93
+  },
+  "stage_one_extended_repair": {
+    "accuracy": 0.671,
+    "balanced_accuracy": 0.646,
+    "precision": 0.47,
+    "recall": 0.581
+  },
+  "stage_two_positive_duration": {
+    "mae_hours_on_actual_extended": 40.9,
+    "rows_evaluated": 93
+  },
+  "combined_prediction": {
+    "mae_hours": 24.57,
+    "zero_hour_predictions": 190
+  },
+  "features": {
+    "categorical": [
+      "Asset_Type",
+      "Inform_Wor",
+      "Circuit",
+      "Substation",
+      "Event",
+      "Incident_W"
+    ],
+    "numeric": [
+      "has_access_issue",
+      "has_special_equipment",
+      "media_count",
+      "latitude",
+      "longitude",
+      "report_month",
+      "report_hour",
+      "circuit_customer_count",
+      "circuit_critical_customer_count",
+      "circuit_fuse_count",
+      "circuit_recloser_count",
+      "circuit_switch_count",
+      "circuit_transformer_count",
+      "topology_depth",
+      "nearest_primary_miles",
+      "nearest_secondary_miles",
+      "nearest_transformer_miles",
+      "nearest_protective_miles",
+      "circuit_damage_history",
+      "asset_damage_history",
+      "event_damage_history",
+      "circuit_asset_damage_history",
+      "labor_reference_install_hours",
+      "labor_reference_removal_hours",
+      "indirect_labor_multiplier",
+      "access_labor_adder_hours",
+      "estimated_labor_hours"
+    ]
+  },
+  "limitations": [
+    "Repair duration is an asset-work target, not customer outage duration.",
+    "The source territory is APCO, overwhelmingly Virginia.",
+    "A same-day record may reflect logging precision rather than zero restoration time."
+  ]
+}

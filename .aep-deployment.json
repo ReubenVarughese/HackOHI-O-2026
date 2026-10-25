@@ -1,0 +1,10 @@
+{
+    "region":  "us-east-2",
+    "endpoint":  "http://aep-outage-concierge-20261024161142.s3-website.us-east-2.amazonaws.com",
+    "bucket":  "aep-outage-concierge-20261024161142",
+    "cloudfrontId":  "EBR3L1FPA75IS",
+    "cloudfrontDomain":  "d2iw6ggtjrihno.cloudfront.net",
+    "cloudfrontStatus":  "Deployed",
+    "apiService":  "aep-outage-concierge-api",
+    "apiUrl":  "https://cspvisj22u.us-east-2.awsapprunner.com"
+}

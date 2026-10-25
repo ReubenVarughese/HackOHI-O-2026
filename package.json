@@ -1,0 +1,25 @@
+{
+  "name": "aep-outage-concierge",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:map-data": "node scripts/build-map-data.mjs",
+    "audit:training-data": "python scripts/audit_training_data.py",
+    "build:historical-lookup": "python scripts/build_historical_lookup.py",
+    "train:restoration": "python model/train_restoration_model.py",
+    "train:restoration-two-stage": "python model/train_two_stage_restoration.py",
+    "api": "python -m uvicorn api.prediction_api:app --host 127.0.0.1 --port 8000",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "shpjs": "^6.2.0",
+    "vite": "^6.0.5"
+  }
+}
