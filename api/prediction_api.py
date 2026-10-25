@@ -307,6 +307,71 @@ def confidence_chat(question: str, prediction: dict[str, object]) -> str | None:
     )
 
 
+def specialized_guidance_chat(question: str, prediction: dict[str, object]) -> str | None:
+    lower = question.lower()
+    risk = prediction["risk"]
+    window = prediction["restoration_window_hours"]
+    score = risk["score"]
+    event = str(prediction.get("scenario", "selected scenario")).lower()
+    wind = prediction.get("wind_speed_kmh")
+    rain = prediction.get("precipitation_mm")
+
+    if "medical" in lower or "life support" in lower or "refrigerated medication" in lower:
+        return (
+            "If you rely on powered medical equipment, contact your healthcare provider or emergency "
+            "service before an outage occurs to make an individualized backup plan. Notify your utility "
+            "if a medical-needs program is available, keep backup power charged, and never wait for "
+            "the estimate if equipment power becomes unsafe."
+        )
+    if "generator" in lower:
+        return (
+            "Use a generator only outdoors, well away from doors, windows, and vents. Never connect it "
+            "to a home outlet or electrical panel unless a qualified electrician installed an approved "
+            "transfer switch. Keep it dry, refuel only when cool, and use battery-powered carbon-monoxide "
+            "alarms. Follow the manufacturer instructions and local emergency guidance."
+        )
+    if "asset repair duration" in lower or "repair duration" in lower:
+        return (
+            f"The {window['low']}–{window['high']} hour estimate describes time for utility asset repair "
+            "under this scenario. It is not a promise that every customer will be without power for that "
+            "entire period, and it does not confirm that an outage is active. Field assessment, switching, "
+            "travel, crew availability, and additional damage can change the result."
+        )
+    if "weather" in lower and ("affect" in lower or "impact" in lower or "included" in lower):
+        weather = (
+            f"Live conditions included {wind:.0f} km/h wind and {rain:.1f} mm of precipitation."
+            if isinstance(wind, (int, float)) and isinstance(rain, (int, float))
+            else "Live weather was not available, so the estimate used the selected storm assumptions."
+        )
+        return f"{weather} Weather can increase the expected repair effort when wind or precipitation is elevated. The current estimate is {score}% {risk['label'].lower()} risk."
+    if "assumption" in lower or "missing" in lower:
+        return (
+            f"The scenario assumes {prediction.get('damage_assets', 0)} damaged assets, "
+            f"{prediction.get('crews_available', 0)} available crews, {prediction.get('access_percent', 0)}% "
+            f"access, and a {event} outlook. The estimate does not know live crew dispatch, newly reported "
+            "damage, exact customer-level outage status, or changing road conditions unless those are supplied."
+        )
+    if "extreme" in lower and ("storm" in lower or "change" in lower):
+        return (
+            "An extreme storm would generally increase outage risk and extend the repair window because "
+            "of stronger winds, more widespread damage, access constraints, and competing restoration work. "
+            "Select Extreme storm in the scenario controls to recalculate the estimate with those conditions."
+        )
+    if "safe" in lower or "safety" in lower:
+        return (
+            "Stay away from downed lines, damaged equipment, and flooded areas. Keep phones, lighting, "
+            "medication, and essential devices ready. Use generators outdoors only, and follow official "
+            "utility and emergency-management instructions."
+        )
+    if "compare" in lower and ("columbus" in lower or "roanoke" in lower):
+        return (
+            "I can explain the current location's estimate, but a comparison requires running a second "
+            "location through the same scenario assumptions. Compare the two risk percentages, confidence "
+            "levels, evidence modes, and restoration windows rather than treating either estimate as a confirmed outage duration."
+        )
+    return None
+
+
 @app.post("/chat")
 def chat(request: ChatRequest) -> dict[str, object]:
     prediction = predict(request.prediction)
@@ -319,6 +384,9 @@ def chat(request: ChatRequest) -> dict[str, object]:
     data_answer = data_explanation_chat(request.question, prediction)
     if data_answer:
         return {"answer": data_answer, "mode": "data-explanation", "model": BEDROCK_MODEL_ID}
+    specialized_answer = specialized_guidance_chat(request.question, prediction)
+    if specialized_answer:
+        return {"answer": specialized_answer, "mode": "specialized-guidance", "model": BEDROCK_MODEL_ID}
     facts = json.dumps(
         {
             "question": request.question,
