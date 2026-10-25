@@ -249,9 +249,76 @@ def fallback_chat(question: str, prediction: dict[str, object]) -> str:
     return f"The current estimate is {risk['label'].lower()} outage risk at {risk['score']}%, with a {window['low']}–{window['high']} hour asset-repair window if an outage occurs. This is an estimate, not a confirmed outage or restoration time."
 
 
+def preparation_chat(question: str, prediction: dict[str, object]) -> str | None:
+    if "prepare" not in question.lower():
+        return None
+    risk = prediction["risk"]
+    score = risk["score"]
+    event = str(prediction.get("scenario", "")).lower()
+    if "extreme" in event or score >= 70:
+        return "Prepare for an extended outage. Gather water, food, medication, and lighting, and charge essential devices. Use generators only outdoors and away from windows, secure loose items, avoid downed lines or flooded areas, and keep an emergency communication plan."
+    if "severe" in event or score >= 45:
+        return "Prepare for a possible outage. Gather supplies for 24–48 hours, charge essential devices, unplug sensitive electronics, secure outdoor items, keep vehicles fueled, and monitor official safety updates."
+    return "Make a simple plan. Charge essential devices, keep medication and lighting ready, and monitor official safety and utility updates."
+
+
+def data_explanation_chat(question: str, prediction: dict[str, object]) -> str | None:
+    lower = question.lower()
+    if not any(term in lower for term in ("data", "source", "evidence", "nearby", "support")):
+        return None
+    sources = prediction.get("data_sources", {})
+    risk = prediction["risk"]
+    window = prediction["restoration_window_hours"]
+    location = prediction.get("location_name", "the selected location")
+    network = sources.get("utility_network", "utility network evidence was unavailable")
+    history = sources.get("historical_damage", "historical damage evidence was unavailable")
+    weather = sources.get("weather", "storm assumptions")
+    scenario = prediction.get("scenario", "the selected scenario")
+    return (
+        f"For {location}, I used {network}. The historical damage lookup was {history}, "
+        f"and the weather input was {weather}. I also used the {scenario.lower()} scenario, "
+        f"{prediction.get('damage_assets', 0)} damaged assets, {prediction.get('crews_available', 0)} available crews, "
+        f"and {prediction.get('access_percent', 0)}% access. These inputs produced a "
+        f"{risk['score']}% {risk['label'].lower()} risk and a {window['low']}–{window['high']} hour "
+        "asset-repair estimate. It estimates repair work, not a confirmed customer outage duration."
+    )
+
+
+def confidence_chat(question: str, prediction: dict[str, object]) -> str | None:
+    lower = question.lower()
+    if not any(term in lower for term in ("confidence", "confident", "certainty", "reliable")):
+        return None
+    risk = prediction["risk"]
+    confidence = risk["confidence"]
+    data_mode = prediction.get("data_mode", "generic_fallback")
+    if data_mode == "matched":
+        support = "The location has a direct utility or circuit match."
+    elif data_mode == "regional_match":
+        support = "The location has a nearby regional utility match rather than an exact circuit match."
+    else:
+        support = "The estimate uses generalized assumptions because a nearby utility match was not available."
+    limitation = (
+        "Confidence is also limited because field conditions, damage reports, and crew availability can change."
+    )
+    return (
+        f"Confidence in this estimate is {confidence}%. {support} "
+        f"The current estimate is {risk['score']}% {risk['label'].lower()} outage risk. {limitation} "
+        "This confidence describes the estimate's supporting evidence; it does not confirm that an outage is occurring."
+    )
+
+
 @app.post("/chat")
 def chat(request: ChatRequest) -> dict[str, object]:
     prediction = predict(request.prediction)
+    preparation_answer = preparation_chat(request.question, prediction)
+    if preparation_answer:
+        return {"answer": preparation_answer, "mode": "prepared-guidance", "model": BEDROCK_MODEL_ID}
+    confidence_answer = confidence_chat(request.question, prediction)
+    if confidence_answer:
+        return {"answer": confidence_answer, "mode": "confidence-explanation", "model": BEDROCK_MODEL_ID}
+    data_answer = data_explanation_chat(request.question, prediction)
+    if data_answer:
+        return {"answer": data_answer, "mode": "data-explanation", "model": BEDROCK_MODEL_ID}
     facts = json.dumps(
         {
             "question": request.question,
@@ -268,7 +335,8 @@ def chat(request: ChatRequest) -> dict[str, object]:
         "When explicitly asked what data supports the estimate, name the searched location, utility network "
         "source, historical damage source, weather source, damage/crew/access assumptions, and "
         "storm outlook from the JSON. Do not replace those specific sources with a generic phrase. "
-        "Say when information is estimated or unavailable. Keep the answer under 90 words."
+        "Say when information is estimated or unavailable. For data questions, explain the role "
+        "of each supplied input rather than only listing source names. Keep the answer under 150 words."
     )
     try:
         response = bedrock_runtime.converse(
@@ -397,6 +465,10 @@ def predict(request: PredictionRequest) -> dict[str, object]:
         fallbacks.append("Live weather was not supplied; weather impact was not added.")
     return {
         "model_version": "two-stage-restoration-2026-10-24",
+        "location_name": request.location_name,
+        "damage_assets": request.damage_assets,
+        "crews_available": request.crews_available,
+        "access_percent": request.access_percent,
         "risk": {"score": risk_score, "label": risk_label, "confidence": confidence},
         "scenario": request.event,
         "restoration_window_hours": {"low": low, "high": high},
