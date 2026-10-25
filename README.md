@@ -126,7 +126,7 @@ The production frontend is generated in `dist/`.
 src/                    React application and styles
 api/prediction_api.py   FastAPI prediction and chat API
 model/                  Trained models and historical lookup data
-Sparky *.png            Transparent Sparky avatar assets
+assets/sparky/          Sparky PNG avatar assets and original JPG sources
 scripts/                Data and model preparation utilities
 Dockerfile              API container definition
 requirements-api.txt    API runtime dependencies

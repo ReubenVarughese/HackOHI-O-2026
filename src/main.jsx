@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
-import sparkyFriendlyUrl from '../Sparky 1.png';
-import sparkyIdeaUrl from '../Sparky 2.png';
-import sparkyHighlightUrl from '../Sparky 3.png';
-import sparkyWarningUrl from '../Sparky 4.png';
+import sparkyFriendlyUrl from '../assets/sparky/Sparky 1.png';
+import sparkyIdeaUrl from '../assets/sparky/Sparky 2.png';
+import sparkyHighlightUrl from '../assets/sparky/Sparky 3.png';
+import sparkyWarningUrl from '../assets/sparky/Sparky 4.png';
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
   || (import.meta.env.PROD ? 'https://cspvisj22u.us-east-2.awsapprunner.com' : 'http://127.0.0.1:8000');
@@ -54,6 +54,25 @@ function weatherDescription(weather) {
   if (weather.error) return 'Live weather unavailable · using selected storm outlook';
   if (!weather.available) return 'No live weather signal';
   return `${Math.round(weather.temperature)}°C · wind ${Math.round(weather.windSpeed)} km/h · rain ${weather.precipitation.toFixed(1)} mm`;
+}
+
+function preparationGuidance(storm, risk) {
+  if (storm === 'extreme' || risk >= 70) {
+    return {
+      title: 'Prepare for an extended outage',
+      items: ['Charge devices and gather water, food, medication, and lighting.', 'Use generators only outdoors and away from windows.', 'Secure loose outdoor items and avoid downed lines or flooded areas.', 'Keep an emergency communication plan and follow official instructions.']
+    };
+  }
+  if (storm === 'severe' || risk >= 45) {
+    return {
+      title: 'Prepare for a possible outage',
+      items: ['Prepare water, food, medication, and lighting for 24–48 hours.', 'Charge essential devices and unplug sensitive electronics.', 'Secure outdoor items and keep vehicles fueled.', 'Monitor official safety and utility updates.']
+    };
+  }
+  return {
+    title: 'Make a simple plan',
+    items: ['Charge essential devices.', 'Keep medication and lighting ready.', 'Monitor official safety and utility updates.']
+  };
 }
 
 function resolveLocation(latitude, longitude) {
@@ -273,13 +292,16 @@ function AssistantWorkspace({ context, contextId, setContextId, locationQuery, s
   return <section className="assistant-shell">
     <section className="context-bar"><label className="location-search">City, state<input list="location-suggestions" value={locationQuery} onChange={(event) => { setLocationQuery(event.target.value); setLocationStatus(''); }} onKeyDown={(event) => { if (event.key === 'Enter') { event.preventDefault(); searchLocation(); } }} placeholder="Enter a city, state" aria-label="City and state" required /><datalist id="location-suggestions"><option value="Columbus, Ohio" /></datalist><button type="button" onClick={searchLocation}>Search</button>{locationStatus && <small>{locationStatus}</small>}</label><label>Storm outlook<select value={storm} onChange={(event) => setStorm(event.target.value)}>{Object.entries(stormProfiles).map(([key, item]) => <option key={key} value={key}>{item.label}</option>)}</select></label><div className="context-chip">⌖ <strong>{context.area}</strong><span>{context.dataMode === 'matched' ? 'Using local utility evidence' : context.dataMode === 'unselected' ? 'Enter a city and state to begin' : 'Using regional estimates'}</span></div></section>
     {contextId === 'custom' && <div className="coordinate-inputs compact"><label>Latitude<input type="number" step="0.001" value={latitude} onChange={(event) => setLatitude(event.target.value)} /></label><label>Longitude<input type="number" step="0.001" value={longitude} onChange={(event) => setLongitude(event.target.value)} /></label></div>}
-    <div className="assistant-layout"><section className="chat-panel"><div className="chat-history" ref={chatHistoryRef}>{messages.map((message) => <div className={`chat-message ${message.role}`} key={message.id}>{message.role === 'assistant' ? <img className="sparky-avatar" src={sparkyAvatar(message.text, message.id)} alt="Sparky" /> : <span>You</span>}<p>{message.text}</p></div>)}</div><div className="quick-prompts">{['What is my outage risk?', 'When could power return?', 'How should I prepare?', 'What data supports this?'].map((prompt) => <button key={prompt} disabled={context.dataMode === 'unselected' || isAsking} onClick={() => ask(prompt)}>{prompt}</button>)}</div><form className="composer" onSubmit={(event) => { event.preventDefault(); ask(); }}><input value={question} disabled={context.dataMode === 'unselected' || isAsking} onChange={(event) => setQuestion(event.target.value)} placeholder={context.dataMode === 'unselected' ? 'Enter a city and state first…' : isAsking ? 'Sparky is checking the estimate…' : 'Ask about your outage estimate…'} aria-label="Ask the outage assistant" /><button type="submit" disabled={context.dataMode === 'unselected' || isAsking}>Ask <span>↗</span></button></form></section><section className="response-column"><ResponseCards result={result} riskLabel={riskLabel} context={context} weather={weather} apiPrediction={apiPrediction} setActiveTab={setActiveTab} /></section></div>
+    <div className="assistant-layout"><section className="chat-panel"><div className="chat-history" ref={chatHistoryRef}>{messages.map((message) => <div className={`chat-message ${message.role}`} key={message.id}>{message.role === 'assistant' ? <img className="sparky-avatar" src={sparkyAvatar(message.text, message.id)} alt="Sparky" /> : <span>You</span>}<p>{message.text}</p></div>)}</div><div className="quick-prompts">{['What is my outage risk?', 'When could power return?', 'How should I prepare?', 'What data supports this?'].map((prompt) => <button key={prompt} disabled={context.dataMode === 'unselected' || isAsking} onClick={() => ask(prompt)}>{prompt}</button>)}</div><form className="composer" onSubmit={(event) => { event.preventDefault(); ask(); }}><input value={question} disabled={context.dataMode === 'unselected' || isAsking} onChange={(event) => setQuestion(event.target.value)} placeholder={context.dataMode === 'unselected' ? 'Enter a city and state first…' : isAsking ? 'Sparky is checking the estimate…' : 'Ask about your outage estimate…'} aria-label="Ask the outage assistant" /><button type="submit" disabled={context.dataMode === 'unselected' || isAsking}>Ask <span>↗</span></button></form></section><section className="response-column"><ResponseCards result={result} riskLabel={riskLabel} context={context} storm={storm} weather={weather} apiPrediction={apiPrediction} setActiveTab={setActiveTab} /></section></div>
   </section>;
 }
 
 function answerFor(question, result, context, weather, apiPrediction, storm, damage, crews, access) {
   const lower = question.toLowerCase();
-  if (lower.includes('prepare')) return 'Prepare for the possibility of an interruption, keep essential devices charged, and follow official safety updates. The action card has more detail.';
+  if (lower.includes('prepare')) {
+    const guidance = preparationGuidance(storm, result.risk);
+    return `${guidance.title}. ${guidance.items.slice(0, 3).join(' ')} Follow official safety updates.`;
+  }
   if (lower.includes('data') || lower.includes('support')) {
     const sources = apiPrediction?.dataSources || {};
     const network = sources.utility_network || 'generic network fallback';
@@ -291,11 +313,12 @@ function answerFor(question, result, context, weather, apiPrediction, storm, dam
   return `The current outage risk is ${result.risk}% (${result.risk >= 70 ? 'high' : result.risk >= 45 ? 'moderate' : 'low'}). Confidence is ${result.confidence}%, and conditions can change as field reports arrive.`;
 }
 
-function ResponseCards({ result, riskLabel, context, weather, apiPrediction, setActiveTab }) {
+function ResponseCards({ result, riskLabel, context, storm, weather, apiPrediction, setActiveTab }) {
   const locationSelected = context.dataMode !== 'unselected';
+  const guidance = preparationGuidance(context.dataMode === 'unselected' ? 'moderate' : storm, result.risk);
   const evidenceLabel = apiPrediction?.dataMode === 'regional_match' ? 'Nearby regional utility evidence' : apiPrediction?.dataMode === 'matched' ? 'Matched utility evidence' : locationSelected ? 'Generic regional estimate' : context.source;
   const evidenceDescription = apiPrediction?.dataSources?.historical_damage === 'nearest coordinate lookup' ? 'Historical damage and network patterns were found near this location.' : locationSelected ? 'No supplied utility records were found near this location.' : 'Enter a city and state to begin.';
-  return <div className="response-cards"><article className={`answer-card risk-card ${locationSelected ? riskLabel.toLowerCase() : ''}`}><div className="card-kicker">OUTAGE RISK {locationSelected && <span>{result.confidence}% confidence</span>}</div><strong className="card-value">{locationSelected ? `${result.risk}%` : '—'}</strong><h3>{locationSelected ? `${riskLabel} likelihood` : 'Select a location'}</h3><p>{locationSelected ? (apiPrediction?.dataMode === 'regional_match' ? 'Nearby regional utility evidence is available.' : 'Generic estimates are being used.') : 'Enter a city and state to calculate outage risk.'}</p></article><article className="answer-card restoration-card"><div className="card-kicker">RESTORATION WINDOW</div><strong className="card-value">{locationSelected ? <>{result.low}–{result.high}<small> hrs</small></> : '—'}</strong><h3>{locationSelected ? 'If an outage occurs' : 'Awaiting location'}</h3><p>{locationSelected ? 'Storm-calibrated asset-repair estimate.' : 'Enter a city and state to estimate restoration timing.'}</p></article><article className="answer-card weather-card"><div className="card-kicker">WEATHER NOW</div><strong className="card-value weather-value">{weather.available ? `${Math.round(weather.windSpeed * 0.621371)} mph` : '—'}</strong><h3>{weather.available ? `${Math.round(weather.temperature * 9 / 5 + 32)}°F · ${(weather.precipitation / 25.4).toFixed(2)} in rain` : 'Weather unavailable'}</h3><p>{weather.available ? 'Live conditions are included in the estimate.' : 'Search for a city and state to load local weather.'}</p></article><article className="answer-card evidence-card"><div className="card-kicker">EVIDENCE</div><h3>{evidenceLabel}</h3><p>{evidenceDescription}</p></article><article className="answer-card actions-card"><div className="card-kicker">PREPARE</div><h3>Make a simple plan</h3><ul><li>Charge essential devices.</li><li>Keep medication and lighting ready.</li><li>Follow official safety updates.</li></ul></article><article className={`answer-card alert-card ${locationSelected && result.eligible ? 'alert-critical' : 'alert-monitor'}`}><div className="card-kicker">ALERTS</div><h3>{locationSelected ? (result.eligible ? 'Proactive alert recommended' : 'Continue monitoring') : 'Awaiting location'}</h3><p>{locationSelected ? (result.eligible ? 'Risk or declared need meets the current alert threshold.' : 'No alert threshold is met yet.') : 'Select a location to evaluate alert guidance.'}</p></article></div>;
+  return <div className="response-cards"><article className={`answer-card risk-card ${locationSelected ? riskLabel.toLowerCase() : ''}`}><div className="card-kicker">OUTAGE RISK {locationSelected && <span>{result.confidence}% confidence</span>}</div><strong className="card-value">{locationSelected ? `${result.risk}%` : '—'}</strong><h3>{locationSelected ? `${riskLabel} likelihood` : 'Select a location'}</h3><p>{locationSelected ? (apiPrediction?.dataMode === 'regional_match' ? 'Nearby utility evidence is available.' : 'Generic estimates are being used.') : 'Enter a city and state to calculate outage risk.'}</p></article><article className="answer-card restoration-card"><div className="card-kicker">RESTORATION WINDOW</div><strong className="card-value">{locationSelected ? <>{result.low}–{result.high}<small> hrs</small></> : '—'}</strong><h3>{locationSelected ? 'If an outage occurs' : 'Awaiting location'}</h3><p>{locationSelected ? 'Storm-calibrated asset-repair estimate.' : 'Enter a city and state to estimate restoration timing.'}</p></article><article className="answer-card weather-card"><div className="card-kicker">WEATHER NOW</div><strong className="card-value weather-value">{weather.available ? `${Math.round(weather.windSpeed * 0.621371)} mph` : '—'}</strong><h3>{weather.available ? `${Math.round(weather.temperature * 9 / 5 + 32)}°F · ${(weather.precipitation / 25.4).toFixed(2)} in rain` : 'Weather unavailable'}</h3><p>{weather.available ? 'Live conditions are included in the estimate.' : 'Search for a city and state to load local weather.'}</p></article><article className="answer-card evidence-card"><div className="card-kicker">EVIDENCE</div><h3>{evidenceLabel}</h3><p>{evidenceDescription}</p></article><article className="answer-card actions-card"><div className="card-kicker">PREPARE</div>{locationSelected ? <><h3>{guidance.title}</h3><ul>{guidance.items.map((item) => <li key={item}>{item}</li>)}</ul></> : <><h3>Select a location first</h3><p>Enter a city and state to receive preparation steps based on the storm outlook and estimated outage risk.</p></>}</article><article className={`answer-card alert-card ${locationSelected && result.eligible ? 'alert-critical' : 'alert-monitor'}`}><div className="card-kicker">ALERTS</div><h3>{locationSelected ? (result.eligible ? 'Proactive alert recommended' : 'Continue monitoring') : 'Awaiting location'}</h3><p>{locationSelected ? (result.eligible ? 'Risk or declared need meets the current alert threshold.' : 'No alert threshold is met yet.') : 'Select a location to evaluate alert guidance.'}</p></article></div>;
 }
 
 function Overview({ result, riskLabel, damage, setDamage, crews, setCrews, access, setAccess }) {

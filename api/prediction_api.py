@@ -239,7 +239,13 @@ def fallback_chat(question: str, prediction: dict[str, object]) -> str:
     risk = prediction["risk"]
     window = prediction["restoration_window_hours"]
     if "prepare" in question.lower():
-        return "Prepare for a possible interruption by charging essential devices, keeping medication and lighting ready, and following official safety updates."
+        score = risk["score"]
+        event = str(prediction.get("scenario", "")).lower()
+        if "extreme" in event or score >= 70:
+            return "Prepare for an extended outage by gathering water, food, medication, and lighting. Use generators only outdoors, secure loose items, and follow official emergency instructions."
+        if "severe" in event or score >= 45:
+            return "Prepare for a possible outage by gathering supplies for 24–48 hours, charging essential devices, securing outdoor items, and monitoring official safety updates."
+        return "Make a simple plan by charging essential devices, keeping medication and lighting ready, and following official safety updates."
     return f"The current estimate is {risk['label'].lower()} outage risk at {risk['score']}%, with a {window['low']}–{window['high']} hour asset-repair window if an outage occurs. This is an estimate, not a confirmed outage or restoration time."
 
 
@@ -392,6 +398,7 @@ def predict(request: PredictionRequest) -> dict[str, object]:
     return {
         "model_version": "two-stage-restoration-2026-10-24",
         "risk": {"score": risk_score, "label": risk_label, "confidence": confidence},
+        "scenario": request.event,
         "restoration_window_hours": {"low": low, "high": high},
         "extended_repair_probability": round(extended_probability, 3),
         "model_positive_duration_hours": round(positive_hours, 2),
